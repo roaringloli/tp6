@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" media="screen" href="/assets/css/style.css">
+    <title></title>
+  </head>
+  <body>
+    <p>
+      Cliquez dans la zone pour changer sa couleur.
+    </p>
+    <div id="carre" style="width:500px;height:100px;border:1px solid #000;" onClick="couleur(this)"></div>
+    <script>
+    function couleur() {
+      var color = prompt("Entrez une couleur", "couleur");
+      if (color != null) {
+            carre.style.backgroundColor=color;
+      }
+    }
+</script>
+
+  </body>
+</html>
