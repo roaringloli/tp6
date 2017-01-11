@@ -2,19 +2,21 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" media="screen" href="/assets/css/style.css">
     <title></title>
   </head>
   <body>
-   <form action="http://www.iut-fbleau.fr/sitebp/post.php" method="post">
+   <form action="http://www.iut-fbleau.fr/sitebp/post.php" method="post" id="dateN">
      <label for="date">Date de naissance(format jj/mm/aaaa)</label><br>
-     <input type="date" name="date" pattern="[0-9][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9]" id="dateN" required > <br>
-     <input type="button" onclick="reset" value="Votre age">
+     <input type="date" name="date" pattern="[0-9][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9]" required > <br>
+     <input type="button" onclick="reset()" value="Votre age">
    </form>
-     <script>
+    <script>
        function reset(){
+         var str=
+         var patt=new RegExp("[0-9][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9]");
+         var res= patt.exec(str);
          if(exec()!=0)
-        document.getElementById("date").reset();
+        document.getElementById("dateN").reset();
        }else{
          
        }
