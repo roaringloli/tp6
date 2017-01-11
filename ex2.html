@@ -6,12 +6,18 @@
     <title></title>
   </head>
   <body>
-    <img src="/assets/img/off.png" onclick="allumer(this)">
+    <img src="/assets/img/off.png" id="lampe">
     <script>
-    function allumer() {
       var etat=0;
+      var swap=setInterval(function(){interrupteur()},1000);
+    function interrupteur() { 
       if (etat == 0) {
-            
+        lampe.src="assets/img/on.png";
+        etat=1;   
+      }
+      else if (etat==1) {
+        lampe.src="assets/img/off.png";
+        etat=0;
       }
     }
     </script>
